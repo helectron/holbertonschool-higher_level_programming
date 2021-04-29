@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- *check_cycle - check if there is a cycle in the linked list
- *@list: pointer to the head of the list
- *Return: 0 if there is a cycle, 1 if there is not
+ * check_cycle - check if there is a cycle in the linked list
+ * @list: pointer to the head of the list
+ * Return: 0 if there is a cycle, 1 if there is not
  */
 int check_cycle(listint_t *list)
 {
