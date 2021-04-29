@@ -1,12 +1,11 @@
 #include "lists.h"
-
 /**
  * check_cycle - check if there is a cycle in the linked list 
- * @One: go through the linked list one by one
- * @Two: go through the linked list two by two
- * Return: 1 if there is a cycle, 0 if there is not
-*/
-
+ * @list: pointer to the head of the list
+ * @One: go throught the linked list one by one
+ * @Two: go throught the linled list two by two
+ * Return: 0 if there is a cycle, 1 if there is not
+ */
 int check_cycle(listint_t *list)
 {
     listint_t *One = list;
