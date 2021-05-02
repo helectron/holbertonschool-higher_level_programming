@@ -14,8 +14,9 @@ The language’s name isn’t about snakes, but about the popular British comedy
 Tim Peters, a major contributor to the Python community, wrote this poem to highlight the philosophies of Python. If you type in “import this” in your Python IDLE, you’ll find this poem:
 
 <span style="background-color: #FFFF00">
-The Zen of Python, by Tim Peters
+## The Zen of Python, by Tim Peters
 
+```
 Beautiful is better than ugly.
 Explicit is better than implicit.
 Simple is better than complex.
@@ -35,7 +36,10 @@ Although never is often better than *right* now.
 If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those! </span>
-
+```
 ## Information source
 
 https://data-flair.training/blogs/facts-about-python-programming/
+
+:+1: :sparkles: :camel: :tada:
+:rocket: :metal: :octocat:
