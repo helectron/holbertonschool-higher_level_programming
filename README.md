@@ -1,67 +1,17 @@
-# Python - Hello, World
-Playing with Python. Taking advantage of the fact that in this high-level language there are ten different ways to do the same thing
+## Learning Python
 
+1. Python was a hobby project
+In December 1989, Python’s creator Guido Van Rossum was looking for a hobby project to keep him occupied in the week around Christmas. He had been thinking of writing a new scripting language that’d be a descendant of ABC and also appeal to Unix/C hackers. He chose to call it Python.
 
-## General concepts
-The Zen of Python
-How to print text and variables using print
-How to use strings
-What are indexing and slicing in Python
+2. Why it was called Python
+The language’s name isn’t about snakes, but about the popular British comedy troupe Monty Python (from the 1970s). Guido himself is a big fan of Monty Python’s Flying Circus. Being in a rather irreverent mood, he named the project ‘Python’. Isn’t it an interesting Python fact?
 
-## PEP 8 -- Style Guide for Python Code
-The code use the PEP 8 style (version 1.7.*)
+3. The Zen of Python
+Tim Peters, a major contributor to the Python community, wrote this poem to highlight the philosophies of Python. If you type in “import this” in your Python IDLE, you’ll find this poem:
 
-## Python Scripts
-All the files are interpreted/compiled on Ubuntu 14.04 LTS using python3 (version 3.4.3)
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/231/48a9fdbd67c84a328a9df9ec8d93b9ac2458ac37721d7d53e51a27fb2bdc5263.jpg)
 
-```python
-#!/usr/bin/python3
-```
+## Information source
 
-```bash
-#!/bin/bash
-```
-
-## Some precisions
-I used emacs as an editor.
-
-All programs and functions are compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
-
-The code used the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-
-There is no use of global variables
-
-The prototypes of all the functions are included in your header file called lists.h
-
-## Install PEP8
-Pycodestyle is now the new standard of Python style code, but at school we will use PEP8, version 1.7.* Pycodestyle is based on pep8. The hardest part now is to install it for Python 3:
-
-## Regular Ubuntu 14.04 install
-```bash
-$ sudo apt-get install python3-pep8
-```
-
-## Using Pip3
-Install Pip3
-```bash
-$ sudo apt-get install python3-pip
-```
-
-## Install Pep8
-```bash
-$ sudo apt-get install python3-pip
-$ sudo pip3 install -Iv pep8==1.7.0
-```
-
--> Make sure you have the right version
-
-```bash
-$ pep8 --version
-1.7.0
-$
-```
-
-Finally, if you can’t make it work, please use the “container-on-demand” tool to “PEP8” your files in a pre-configured container.
-
-:+1: :sparkles: :camel: :tada:
-:rocket: :metal: :octocat: 
+https://data-flair.training/blogs/facts-about-python-programming/
