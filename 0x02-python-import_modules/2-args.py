@@ -5,7 +5,7 @@ if __name__ == "__main__":
     if n_args == 1:
         print('{}'.format('0 arguments.'))
     if n_args == 2:
-        print('{}'.format('1 argument.'))
+        print('{}'.format('1 argument:'))
     if n_args > 2:
         print('{:d} arguments:'.format(n_args - 1))
     for position in range(1, n_args):
