@@ -1,0 +1,52 @@
+Using Say my name
+_____________________________________________________________ 
+    
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Validation cases
+
+>>> say_my_name("Helena", "Cortes")
+My name is Helena Cortes
+    
+>>> say_my_name("Helena", 15)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+    
+>>> say_my_name(7)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+    
+>>> say_my_name(str(123456), "White")
+My name is 123456 White
+    
+>>> say_my_name("Helena","Cortes","Gomez")
+Traceback (most recent call last):
+...
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+    
+>>> say_my_name("Juan", (1,2))
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+    
+>>> say_my_name("Juan", {1:2})
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+    
+>>> say_my_name()
+Traceback (most recent call last):
+...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+    
+>>> say_my_name(None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name("Helena",3j)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
