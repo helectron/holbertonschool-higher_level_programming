@@ -1,6 +1,23 @@
 Using addition of 2 integers of floats
 _______________________________________
->>> add_integer(1,2)
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Validation of cases
+>>> add_integer(1, 2)
 3
 >>> add_integer(8, 90)
 98
+>>> add_integer(2)
+100
+>>> add_integer(100, -2)
+98
+>>> add_integer(-100, 2)
+-98
+>>> add_integer(-24, -42)
+-66
+>>> add_integer(2.4, 4.2)
+6
+>>> add_integer(-24, 4.2)
+-19
+>>> add_integer(int("239"), 0)
+239
