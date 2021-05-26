@@ -15,8 +15,8 @@ def text_indentation(text):
     if type(text) is not str or len(text) < 0:
         raise TypeError("text must be a string")
     # replace chars with placeholder
-    text = text.replace('.', '.\\')
+    text = text.replace('.', '.\n\n')
     # print(text)
-    text = text.replace('?', '?\\')
-    text = text.replace(':', ':\\')
+    text = text.replace('?', '?\n\n')
+    text = text.replace(':', ':\n\n')
     print(text, end='')
