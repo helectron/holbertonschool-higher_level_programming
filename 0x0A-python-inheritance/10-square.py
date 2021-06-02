@@ -6,14 +6,12 @@ Classes
 Rectangle = __import__('9-rectangle').Rectangle
 
 
-
 class Square(Rectangle):
-    ''' 
-    Creates a Rectangle object 
-    inherits from Rectangle 
+    '''
+    Creates a Rectangle object
+    inherits from Rectangle
     '''
 
-    
     def __init__(self, size):
         ''' Creates square object :
             Args:
@@ -23,7 +21,6 @@ class Square(Rectangle):
         super().__init__(size, size)
         self.__size = size
 
-    
     def area(self):
         '''Calculate rectangule´s area'''
         return super().area()
