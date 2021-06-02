@@ -7,7 +7,7 @@ Instanciate class:
 
     >>> bg = BaseGeometry()
 
-Working test:
+Is it working?:
 
     >>> bg.integer_validator("my_int", 12)
 
@@ -48,54 +48,107 @@ Age not int:
     TypeError: power must be an integer
 
 Checking for integer == 0:
-   >>> b.integer_validator("integer", 0)
+   >>> bg.integer_validator("integer", 0)
    Traceback (most recent call last):
    ...
    ValueError: integer must be greater than 0
 
 Checking for integer < 0;
-   >>> b.integer_validator("integer", -5)
+   >>> bg.integer_validator("integer", -5)
    Traceback (most recent call last):
    ...
    ValueError: integer must be greater than 0
 
 Checking for non-integer types:
-   >>> b.integer_validator("bool", True)
+   >>> bg.integer_validator("bool", True)
    Traceback (most recent call last):
    ...
    TypeError: bool must be an integer
 
-   >>> b.integer_validator("float", 1.5)
+   >>> bg.integer_validator("float", 1.5)
    Traceback (most recent call last):
    ...
    TypeError: float must be an integer
 
-   >>> b.integer_validator("complex", complex(1, 1))
+   >>> bg.integer_validator("complex", complex(1, 1))
    Traceback (most recent call last):
    ...
    TypeError: complex must be an integer
 
-   >>> b.integer_validator("string", "hello")
+   >>> bg.integer_validator("string", "hello")
    Traceback (most recent call last):
    ...
    TypeError: string must be an integer
 
-   >>> b.integer_validator("tuple", (1, 2))
+   >>> bg.integer_validator("tuple", (1, 2))
    Traceback (most recent call last):
    ...
    TypeError: tuple must be an integer
 
-   >>> b.integer_validator("list", [1, 2, 3])
+   >>> bg.integer_validator("list", [1, 2, 3])
    Traceback (most recent call last):
    ...
    TypeError: list must be an integer
 
-   >>> b.integer_validator("dict", {"key": "value"})
+   >>> bg.integer_validator("dict", {"key": "value"})
    Traceback (most recent call last):
    ...
    TypeError: dict must be an integer
 
-   >>> b.integer_validator("set", {"hello", "world"})
+   >>> bg.integer_validator("set", {"hello", "world"})
    Traceback (most recent call last):
    ...
    TypeError: set must be an integer
+
+Age special num cases:
+
+    >>> bg.integer_validator("power", int('nan'))
+    Traceback (most recent call last):
+    ...
+    ValueError: invalid literal for int() with base 10: 'nan'
+
+    >>> bg.integer_validator("power", int('inf'))
+    Traceback (most recent call last):
+    ...
+    ValueError: invalid literal for int() with base 10: 'inf'
+
+    >>> bg.integer_validator("power", int('inf'))
+    Traceback (most recent call last):
+    ...
+    ValueError: invalid literal for int() with base 10: 'inf'
+
+    >>> bg.integer_validator("", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError:  must be greater than 0
+
+    >>> bg.integer_validator("a", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: a must be greater than 0
+
+    >>> bg.integer_validator("list", [0])
+    Traceback (most recent call last):
+    ...
+    TypeError: list must be an integer
+
+    >>> type(bg)
+    <class '7-base_geometry.BaseGeometry'>
+
+    >>> isinstance(bg, BaseGeometry)
+    True
+
+    >>> name = BaseGeometry(1)
+    Traceback (most recent call last):
+    ...
+    TypeError: __init__() takes 1 positional argument but 2 were given
+
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+    >>> bg.integer_validator("", )
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
