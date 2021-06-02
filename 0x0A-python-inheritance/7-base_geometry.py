@@ -10,6 +10,10 @@ Classes
 class BaseGeometry():
     '''Empty BaseGeometry class object'''
 
+    def __init__(self):
+            '''Init constructor space'''
+            pass
+
 # Area | public method un-implemented
     def area(self):
         '''raises an exception'''
@@ -24,5 +28,5 @@ class BaseGeometry():
         '''
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
+        if (value <= 0):
             raise ValueError("{} must be greater than 0".format(name))
