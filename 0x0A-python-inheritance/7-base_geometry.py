@@ -9,7 +9,6 @@ Classes
 # SuperClass
 class BaseGeometry():
     '''Empty BaseGeometry class object'''
-    pass
 
 # Area | public method un-implemented
     def area(self):
