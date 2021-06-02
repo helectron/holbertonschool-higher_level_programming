@@ -8,7 +8,7 @@ Functions:
 def lookup(obj):
     '''Returns the list of available attributes and methods of an object
     Args:
-            obj (obj): object to get attributes from
+            obj: object to get attributes from
     Return:
             a list object with all the attributes and methods
     '''
