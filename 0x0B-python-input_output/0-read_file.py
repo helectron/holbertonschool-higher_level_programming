@@ -4,6 +4,7 @@ Functions:
     read_file(filename="")
 '''
 
+
 def read_file(filename=""):
     '''read to stdout text from a file
     Arguments:
