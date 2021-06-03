@@ -2,7 +2,7 @@
 '''
 module 9-student
 Class:
-    Student 
+    Student
 '''
 
 
