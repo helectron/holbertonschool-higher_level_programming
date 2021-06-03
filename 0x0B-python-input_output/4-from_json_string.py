@@ -9,12 +9,12 @@ import json
 
 
 def from_json_string(my_str):
-    ''' 
+    '''
     returnes an object represented by a JSON string
 
     Arguments:
         my_str (str): string that can be deserialized
-        
+
     Return:
         object
     '''
