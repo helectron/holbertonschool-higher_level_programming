@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 '''
 module 9-student
 Class:
@@ -14,5 +15,5 @@ class Student:
         self.age = age
 
     def to_json(self):
-        """Returns dict representation of student instance"""
+        '''Returns dict representation of student instance'''
         return self.__dict__
