@@ -11,17 +11,21 @@ from models.base import Base
 class Rectangle(Base):
     '''
     Creates a Rectangle object
-    Properties:
+    ...
+    Properties
+    ----------
         width (int): width of the instance
         height (int): height of the instance
         x (int): x coordenate
         y (int): y coordenate
         id (int): object identificator
-    Methods:
+    Methods
+    -------
         __init__(self, width, height, x=0, y=0, id=None)
         def area(self)
         display(self)
-    Magic Methods:
+    Magic Methods
+    -------------
         __str__(self)
     '''
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -119,15 +123,14 @@ class Rectangle(Base):
         overriding the __str__ method so that it returns
         `[Rectangle] (<id>) <x>/<y> - <width>/<height>
         '''
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(__class__.__name__,
-                                                        self.id, self.x,
-                                                        self.y, self.width,
-                                                        self.height))
+        return ("({}) {}/{} - {}/{}"\
+        .format(__class__.__name__,self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args):
         '''
         Update the object's attributes
         Arguments
+        ----------
             args (int): packed list, the order of arguments
             must be as follow:
             - 1st argument should be the id attribute
