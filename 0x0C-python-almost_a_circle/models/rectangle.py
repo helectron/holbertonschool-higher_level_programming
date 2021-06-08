@@ -76,8 +76,12 @@ class Rectangle(Base):
         '''
         Prints in stdout the Rectangle instance
         with the character #
+        x: spaces at the beggining of the line
+        y: new line
         '''
+        print("\n" * self.__y, end='')
         for iterator in range(self.__height):
+            print(" " * self.__x, end='')
             print("#" * self.__width)
 
     def __str__(self):
@@ -85,3 +89,4 @@ class Rectangle(Base):
                                                         self.id, self.x,
                                                         self.y, self.width,
                                                         self.height))
+
