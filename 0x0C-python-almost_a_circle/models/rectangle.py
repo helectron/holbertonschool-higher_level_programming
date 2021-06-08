@@ -127,7 +127,7 @@ class Rectangle(Base):
                 (__class__.__name__, self.id, self.x,
                     self.y, self.width, self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''
         Update the object's attributes
         Arguments
@@ -144,3 +144,6 @@ class Rectangle(Base):
         if args and args[0]:
             for i in range(len(args)):
                 setattr(self, attributes[i], args[i])
+        else:
+            for key in kwargs:
+                setattr(self, key, kwargs[key])
