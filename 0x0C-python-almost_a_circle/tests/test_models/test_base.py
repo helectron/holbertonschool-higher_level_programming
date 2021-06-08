@@ -24,5 +24,13 @@ class TestBase(unittest.TestCase):
         bas3 = Base()
         self.assertEqual(bas1.id, (bas2.id - 1))
 
+    def test_id(self):
+        '''Test with id provided and id as None'''
+        bas1 = Base(None)
+        bas2 = Base(10)
+        bas3 = Base()
+        self.assertEqual(bas1.id, (bas3.id - 1))
+        self.assertEqual(bas2.id, 10)
+
 if __name__ == '__main__':
     unittest.main()
