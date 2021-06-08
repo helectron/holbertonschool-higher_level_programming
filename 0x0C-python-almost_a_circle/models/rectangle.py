@@ -10,7 +10,7 @@ from models.base import Base
 class Rectangle(Base):
     ''' constructor '''
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id)
+        super().init__(id)
         self.width = width
         self.height = height
         self.x = x
@@ -68,3 +68,6 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
 
+    def area(self):
+        '''returns the area of a rectangle'''
+        return self.height * self.width
