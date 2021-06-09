@@ -32,5 +32,10 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        return '[Square] ({}) {}/{} - {}'
-        .format(self.id, self.x, self.y, self.width)
+        '''
+        overloading __str__ method that returns
+        '[Square] (<id>) <x>/<y> - <size>' -
+        in our case, width or height
+         '''
+        return '[Square] ({}) {}/{} - {}'\
+            .format(self.id, self.x, self.y, self.width)
