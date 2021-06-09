@@ -4,15 +4,18 @@ module base
 Class
     Base
 '''
+import json
 
 
 class Base:
-    ''' 
+    '''
     Manage 'id' attribute in all furture instances of this class
     and to avoid duplicating the same code (by extension, same bugs)
-    Class Attributes:
+    Class Attributes
+    ----------------
         __nb_objects (int): number of instances from Base class
-    Methods:
+    Methods
+    -------
         __init__(self, id=None)
         '''
 
@@ -21,9 +24,10 @@ class Base:
     def __init__(self, id=None):  # Initializer for instantiate Base object
         '''
         Constructor
-        if 'id' is set to 'None' the '__nb_objects' is 
+        if 'id' is set to 'None' the '__nb_objects' is
         incremented by one and set as the id for the new object
-        Arguments:
+        Arguments
+        ---------
             id (int): id number for the new object
         '''
 
@@ -32,3 +36,10 @@ class Base:
         else:  # If there is not id, assign the counter one
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+# Static method
+    def to_json_string(list_dictionaries):
+        if list_dictionaries is None:
+            return '[]'
+        else:
+            return list_dictionaries
