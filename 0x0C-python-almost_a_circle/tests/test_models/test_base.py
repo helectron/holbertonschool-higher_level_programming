@@ -13,9 +13,9 @@ class TestBase(unittest.TestCase):
     def test_create_instances(self):
         '''Test for creating instances'''
         bas1 = Base()
-        self.assertEqual(b1.id, 1)
+        self.assertEqual(bas1.id, 1)
         bas2 = Base()
-        self.assertEqual(b2.id, 2)
+        self.assertEqual(bas2.id, 2)
 
     def test_normal(self):
         '''Test under normal parameters'''
@@ -31,6 +31,16 @@ class TestBase(unittest.TestCase):
         bas3 = Base()
         self.assertEqual(bas1.id, (bas3.id - 1))
         self.assertEqual(bas2.id, 10)
+
+    def test_creating_negative(self):
+        ''' Test creating a instance with a negative id '''
+        b4 = Base(-10)
+        self.assertEqual(b4.id, -10)
+
+    def test_creating_float(self):
+        ''' Test creating a instance with a float id '''
+        b6 = Base(7.2)
+        self.assertEqual(b6.id, 7.2)
 
 if __name__ == '__main__':
     unittest.main()
