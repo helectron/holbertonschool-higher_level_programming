@@ -37,9 +37,10 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-# Static method
+    @staticmethod
     def to_json_string(list_dictionaries):
+        ''' doctring'''
         if list_dictionaries is None:
             return '[]'
         else:
-            return list_dictionaries
+            return json.dumps(list_dictionaries)
