@@ -39,8 +39,27 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        ''' doctring'''
+        ''' 
+        Returns the JSON string representation
+        of `list_dictionaries`
+        Arguments
+        ---------
+            list_dictionaries (list): list of dictionaries
+        '''
         if list_dictionaries is None:
             return '[]'
+        return json.dumps(list_dictionaries)
+            
+    @classmethod
+    def save_to_file(cls, list_objs):
+        ''' Wite json in a new file'''
+        
+        if list_objs is None:
+            new_list = '[]'
         else:
-            return json.dumps(list_dictionaries)
+            new_list = []
+            for i in list_objs:
+                new_list.append(i.to_dictionary())
+        with open("{}.json".format(cls.__name__), "w") as write_file:
+            write_file.write(cls.to_json_string(new_list))
+            
