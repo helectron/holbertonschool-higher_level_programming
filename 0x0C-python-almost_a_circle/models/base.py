@@ -62,3 +62,15 @@ class Base:
                 new_list.append(cls.to_dictionary(i))
         with open("{}.json".format(cls.__name__), "w") as write_file:
             write_file.write(cls.to_json_string(new_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ Returnes the list of JSON string
+        representation `json_string`
+        Arguments:
+            json_string (str): string representing a list of dictionaries
+        """
+        if json_string is None or len(json_string) == 0:
+            return "[]"
+        else:
+            return json.loads(json_string)
