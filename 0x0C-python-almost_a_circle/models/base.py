@@ -59,6 +59,6 @@ class Base:
         else:
             new_list = []
             for i in list_objs:
-                new_list.append(i.to_dictionary())
+                new_list.append(cls.to_dictionary(i))
         with open("{}.json".format(cls.__name__), "w") as write_file:
             write_file.write(cls.to_json_string(new_list))
